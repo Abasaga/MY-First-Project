@@ -1,0 +1,94 @@
+
+body{
+    background-image: url(blue-3351466_960_720.jpg);
+
+}
+body  header .about-us {
+    height: 500px;
+    position: relative;
+    display: flex;
+}
+body  header .about-us h1{
+  text-align: left;
+  color: aliceblue;
+}
+body  header .about-us  p{
+    color: aliceblue;
+}
+body header .about-us .about-photo {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  margin-right: 90px;
+}
+
+body header .about-us .about-photo img {
+  width: 600px;
+  height: 280px;
+  display: flex;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+
+body header .about-us .about-info {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    width: 600px;
+}
+
+body header .about-us .about-info .about-item{
+  display: flex;
+}
+body header .about-us .about-info .about-item p {
+    line-height: 2.5;
+    text-align: left;
+    display: flex;
+}
+body header .services {
+    height: 500px;
+    position: relative;
+    display: flex;
+}
+
+body header .services .services-photo {
+    width: 600px;
+    height: 300px;
+    display: flex;
+    margin-right: 90px;
+}
+
+body header .services .services-photo img {
+    width: 600px;
+    height: 320px;
+    display: flex;
+    border-radius: 50px;
+}
+body header .services .services-info .services-item{
+  display: flex;
+  font-size: 1.9em;
+}
+body header .services .services-item p{
+    color: aliceblue;
+}
+body header .services .services-item h1{
+    color: aliceblue;
+}
+body header .services .services-info .services-item p {
+    line-height: 2.5;
+    text-align: left;
+    display: flex;
+}
+.footer-part{
+    
+  padding-top: 90px;
+}
+.footer-left{
+  width: 500px;
+} 
+.footer-right{
+  color: aliceblue;
+float: right;
+margin-right: 70px;
+  
+}

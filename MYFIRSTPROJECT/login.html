@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <form action="">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <input type="submit" class="btn btn-primary" id="register" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Person(name, password) {
+            this.name = name;
+            this.password = password;
+        }
+
+        document.addEventListener("DOMContentLoaded",function () {
+
+            document.getElementById("register").addEventListener("click", function (e) {
+                e.preventDefault();
+
+                let name = document.getElementById("name").value;
+                let password = document.getElementById("password").value;
+
+                let person = new Person(name, password)
+
+                if ("users" in localStorage) {
+                    let allPeople = JSON.parse(localStorage.users);
+                    if ("length" in allPeople) {
+                        let found=false
+                        for (let user of allPeople) {
+                            if (user.name == name && user.password == password) {
+                                found=true;
+                                break;
+                            }
+                        }
+                        if(found){
+                            alert("Siz uğurla daxil oldunuz");
+                        }else{
+                            alert("Parol və ya Login səhvdir")
+                        }
+                    } else {
+                        let onePerson = JSON.parse(localStorage.users)
+                        if(onePerson.name==name && onePerson.password==password){
+                            alert("Siz uğurla daxil oldunuz")
+                        }
+                        else{
+                            alert("Parolunuz vəya Adınız səhvdir")
+                        }
+                    }
+                }
+                else {
+                    alert("Zəhmət olmasa qeydiyyatdan keçin")
+                }
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>
